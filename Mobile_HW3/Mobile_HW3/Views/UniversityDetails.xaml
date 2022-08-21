@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_HW3.Views.UniversityDetails"
+             Title="{Binding Name}"
+             BackgroundColor="#2E6662">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source = "{Binding Logo}" WidthRequest="150" HeightRequest="150" VerticalOptions="Center"/>
+            <Label Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label x:Name="uni_name" Text="{Binding Name}" HorizontalOptions="Center" TextColor="#EEE8A9"/>
+            <Label Text="Type" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="{Binding Type}" HorizontalOptions="Center" TextColor="#EEE8A9"/>
+            <Label Text="Location" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label x:Name="uni_city" Text="{Binding Location}" HorizontalOptions="Center" TextColor="DarkBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Url" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Label x:Name="uni_url" Text="{Binding Url}" HorizontalOptions="Center" TextColor="DarkBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

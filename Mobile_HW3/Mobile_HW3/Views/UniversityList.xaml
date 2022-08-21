@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Mobile_HW3"
+             x:Class="Mobile_HW3.Views.UniversityList"
+             Title="University List"
+             BackgroundColor="#2E6662">
+
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding UniversityLists}" Header="200 Universities(Veriler Yökatlas'dan alınmıştır.)" RowHeight="85" ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout Orientation = "Horizontal" Margin = "10,10,10,10">
+                            <Image Source = "{Binding university_logo}" WidthRequest="75" HeightRequest="75"/>
+                            <Label Text="{Binding university_name}" FontSize="Body" VerticalOptions="Center" TextColor="#EEE8A9"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>
